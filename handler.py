@@ -45,7 +45,7 @@ def CO2(recibo_luz, recibo_gas, numero_personas, horas_avion, horas_coche, tipo_
         excedente = precio-(150*.849+130*1.025)
         kwh_excedente = excedente/3.004
         kwh_anual = (150+130+kwh_excedente)*6
-    elif recibo_luz > 2500:
+    elif recibo_luz >= 2500:
         precio = 3000
         excedente = precio-(150*.849+130*1.025)
         kwh_excedente = excedente/3.004
@@ -61,7 +61,7 @@ def CO2(recibo_luz, recibo_gas, numero_personas, horas_avion, horas_coche, tipo_
     elif recibo_gas < 1000:
         precio = 750
         litros_anual = (precio/precio_litro_gas)*12
-    elif recibo_gas > 1000:
+    elif recibo_gas >= 1000:
         precio = 1500
         litros_anual = (precio/precio_litro_gas)*12
 
